@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './style.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
+const date = new Date();
+const dateName = date.getDate();
+const monthName = date.getMonth();
+const currentYear = date.getFullYear();
+
+function Cardu (){
+    return 
+    <div>
+<div className='card'>Add new text</div>
+    <h3 className='heading'>Tasks</h3>
+    
+    <div className='card'>
+        <h1>Study</h1>
+        <p>{dateName+ "/" + monthName+ "/" + currentYear}</p>
+        <p>Learn JavaScript</p>
+    </div>
+    </div>
+}
+ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+<div>
+  <div className='app'>
+    <h1>ToDo App</h1>
+    <Cardu />
+    </div>
+</div>
+
+
+
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
